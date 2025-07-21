@@ -13,12 +13,12 @@ This project allows users to manage their daily tasks effectively with features 
 
 ## 📸 Screenshots
 
-![ToDo App](./screenshots-1.png)
-![ToDo App](./screenshots-2.png)
-![ToDo App](./screenshots-3.png)
-![ToDo App](./screenshots-4.png)
-![ToDo App](./screenshots-5.png)
-![ToDo App](./screenshots-6.png)
+![ToDo App](./screenshot-1.png)
+![ToDo App](./screenshot-2.png)
+![ToDo App](./screenshot-3.png)
+![ToDo App](./screenshot-4.png)
+![ToDo App](./screenshot-5.png)
+![ToDo App](./screenshot-6.png)
 
 ---
 

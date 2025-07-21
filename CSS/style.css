@@ -109,10 +109,16 @@ h1 {
   /* border-top: 10px solid #fff;
   border-bottom: 10px solid #fff; */
 }
+
+.task-content {
+  display: flex;
+  gap: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
 .finished-at,
 .created-at {
-  position: absolute;
-  right: 0;
   padding: 0 10px;
   font-weight: bold;
 }
@@ -160,7 +166,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #f1f1f1;
@@ -182,9 +188,12 @@ h1 {
 }
 
 .task-item .task-content-container {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px;
   font-weight: bold;
   color: #333;
 }

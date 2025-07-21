@@ -54,17 +54,21 @@ addTaskBtn.onclick = () => {
   const taskContent = document.createElement("div");
   taskContent.className = "task-content-container";
 
+  const taskContentInner = document.createElement("div");
+  taskContentInner.className = "task-content";
+  taskContent.appendChild(taskContentInner);
+
   // Create a counter for the todo task
   const counterTodo = document.createElement("span");
   counterTodo.className = "counter";
   counterTodo.textContent = `${todoList.children.length + 1})`;
-  taskContent.appendChild(counterTodo);
+  taskContentInner.appendChild(counterTodo);
 
   //  create span for value of task
   const taskTextNode = document.createElement("span");
   taskTextNode.textContent = taskText;
   taskTextNode.className = "task-value";
-  taskContent.appendChild(taskTextNode);
+  taskContentInner.appendChild(taskTextNode);
 
   li.append(taskContent);
 

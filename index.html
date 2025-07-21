@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple ToDo List application to manage tasks."
+    />
+    <title>ToDo List App</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My ToDo List</h1>
+      <button
+        id="theme-toggle"
+        class="theme-toggle-btn"
+        aria-label="Toggle Theme"
+        title="Toggle Theme"
+      >
+        🌙
+      </button>
+
+      <div class="task-input">
+        <label for="taskInput" class="sr-only">Enter a task</label>
+        <input
+          name="task"
+          autocomplete="task"
+          type="text"
+          id="taskInput"
+          placeholder="Enter a task..."
+        />
+        <button id="addTaskBtn" aria-label="Add Task">Add</button>
+      </div>
+
+      <div class="tasks-container">
+        <div class="todo-section">
+          <h2>ToDo Tasks</h2>
+          <label for="TodoSearchInput"></label>
+          <input
+            name="Todo_search_input"
+            autocomplete="search"
+            class="search"
+            type="text"
+            id="TodoSearchInput"
+            placeholder="Search tasks..."
+          />
+          <ul id="todoList"></ul>
+        </div>
+        <div class="finished-section">
+          <h2>Finished Tasks</h2>
+          <label for="finishedSearchInput"></label>
+          <input
+            name="finished_search_input"
+            autocomplete="search"
+            class="search"
+            type="text"
+            id="finishedSearchInput"
+            placeholder="Search tasks..."
+          />
+          <ul id="finishedList"></ul>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>Made with ❤️ by Abd El-Rahman Adel</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -288,6 +288,9 @@ body.dark-theme .task-item:hover {
 body.dark-theme .task-item .task-content-container {
   color: #e0e0e0;
 }
+body.dark-theme .task-content {
+  color: #e0e0e0;
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {

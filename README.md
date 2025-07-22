@@ -7,7 +7,7 @@ This project allows users to manage their daily tasks effectively with features 
 
 ## 🚀 Live Demo
 
-📍 [View Live](https://abd-el-rahman-adel-dev.github.io/todo-list-js/) <!-- عدل الرابط لو عندك صفحة شغالة -->
+📍 [View Live](https://abd-el-rahman-adel-dev.github.io/ToDo-List/) <!-- عدل الرابط لو عندك صفحة شغالة -->
 
 ---
 

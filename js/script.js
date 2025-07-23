@@ -279,7 +279,11 @@ const rebindButtons = (list) => {
       finishBtn.textContent = "Finish";
       finishBtn.className = "finish";
       finishBtn.onclick = () => {
-        actions.remove();
+        const oldActions = li.querySelector(".actions");
+        if (oldActions) oldActions.remove();
+
+        const createdAt = li.querySelector(".created-at");
+        if (createdAt) createdAt.remove();
 
         const deleteFinishedBtn = document.createElement("button");
         deleteFinishedBtn.textContent = "Delete";
@@ -292,12 +296,38 @@ const rebindButtons = (list) => {
           }
         };
 
+        // Create a span for the task finished date
+        const taskContent = document.createElement("div");
+        taskContent.className = "task-content-container";
+
+        const taskContentInner = document.createElement("div");
+        taskContentInner.className = "task-content";
+        taskContent.appendChild(taskContentInner);
+
+        const finishedAt = document.createElement("span");
+        finishedAt.className = "finished-at";
+        finishedAt.innerHTML = `<span>${new Date().toLocaleString()}</span><i class="fa-solid fa-clipboard-check"></i>`;
+        taskContentInner.appendChild(finishedAt);
+
         // Create a new actions div for the finished task
         const finishActions = document.createElement("div");
         finishActions.className = "actions";
+
+        if (li.classList.contains("fade-in")) {
+          li.classList.remove("fade-in");
+        }
+        li.classList.add("move-in");
+
+        setTimeout(() => {
+          li.classList.remove("move-in");
+        }, 500);
+
+        li.append(taskContent);
+
         finishActions.appendChild(deleteFinishedBtn);
         li.appendChild(finishActions);
         finishedList.appendChild(li);
+
         updateTodoCounters();
         saveTasks();
       };
@@ -323,9 +353,8 @@ const rebindButtons = (list) => {
 
 // Load tasks from localStorage when the page loads
 window.onload = () => {
-  const savedTodoTasks = localStorage.getItem("todoTasks");
-  const savedFinishTasks = localStorage.getItem("finishTasks");
   const savedTheme = localStorage.getItem("theme");
+
   if (savedTheme === "dark") {
     document.body.classList.add("dark-theme");
     themeToggleBtn.textContent = "🌞"; // Switch to light theme
@@ -334,10 +363,9 @@ window.onload = () => {
     themeToggleBtn.textContent = "🌙"; // Switch to dark theme
   }
   // Load saved tasks into the lists
-  if (savedTheme) {
-    document.body.classList.add(savedTheme);
-    themeToggleBtn.textContent = savedTheme === "dark" ? "🌞" : "🌙";
-  }
+
+  const savedTodoTasks = localStorage.getItem("todoTasks");
+  const savedFinishTasks = localStorage.getItem("finishTasks");
 
   if (savedTodoTasks) {
     todoList.innerHTML = savedTodoTasks;

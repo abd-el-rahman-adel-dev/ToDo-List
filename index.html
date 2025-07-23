@@ -68,7 +68,14 @@
     <footer class="footer">
       <p>Made with ❤️ by Abd El-Rahman Adel</p>
     </footer>
-
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.body.classList.add("dark-theme");
+        }
+      })();
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

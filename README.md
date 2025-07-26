@@ -7,7 +7,7 @@ This project allows users to manage their daily tasks effectively with features 
 
 ## 🚀 Live Demo
 
-📍 [View Live](https://abd-el-rahman-adel-dev.github.io/ToDo-List/) <!-- عدل الرابط لو عندك صفحة شغالة -->
+📍 [View Live](https://codebyabdo.github.io/ToDo-List/) <!-- عدل الرابط لو عندك صفحة شغالة -->
 
 ---
 
@@ -84,8 +84,8 @@ This project is licensed under the [MIT License](./LICENSE).
 
 ## 🙋‍♂️ Author
 
-- [Abd El-Rahman Adel](https://github.com/abd-el-rahman-adel-dev)
-- [LinkedIn](https://www.linkedin.com/in/abdelrahman-adel-webdev)
+- [Abd El-Rahman Adel](https://github.com/codebyabdo)
+- [LinkedIn](https://www.linkedin.com/in/codebyabdo)
 
 ---
 
